@@ -1,6 +1,5 @@
 #include <iostream>
-#include "queue/Node.h"
-#include "queue/Queue.h"
+#include "tree/BinarySearchTree.h"
 
 int main() {
 /*    auto* myLinkedList = new linkedlist::LinkedList(5);
@@ -27,9 +26,23 @@ int main() {
     std::cout << myStack->pop();
     myStack->printStack();*/
 
-    auto* myQueue = new queue::Queue(2);
+    /*auto *myQueue = new queue::Queue(2);
     myQueue->enqueue(3);
-    myQueue->printQueue();
+    myQueue->printQueue();*/
+
+    auto* myBST = new tree::BinarySearchTree();
+    myBST->insert(47);
+    myBST->insert(21);
+    myBST->insert(76);
+    myBST->insert(18);
+    myBST->insert(52);
+    myBST->insert(82);
+
+    myBST->insert(27);
+
+    std::cout << myBST->root->left->right->value << std::endl;
+    std::cout << myBST->contains(18) << std::endl;
+    std::cout << myBST->contains(123);
 
     return 0;
 }
