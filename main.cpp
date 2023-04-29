@@ -1,5 +1,5 @@
 #include <iostream>
-#include "tree/BinarySearchTree.h"
+#include "hashtable/HashTable.h"
 
 int main() {
 /*    auto* myLinkedList = new linkedlist::LinkedList(5);
@@ -30,7 +30,7 @@ int main() {
     myQueue->enqueue(3);
     myQueue->printQueue();*/
 
-    auto* myBST = new tree::BinarySearchTree();
+/*    auto* myBST = new tree::BinarySearchTree();
     myBST->insert(47);
     myBST->insert(21);
     myBST->insert(76);
@@ -42,7 +42,25 @@ int main() {
 
     std::cout << myBST->root->left->right->value << std::endl;
     std::cout << myBST->contains(18) << std::endl;
-    std::cout << myBST->contains(123);
+    std::cout << myBST->contains(123);*/
+
+    auto* myHashTable = new hashtable::HashTable();
+    myHashTable->set("nails", 100);
+    myHashTable->set("tile", 50);
+    myHashTable->set("lumber", 80);
+
+    myHashTable->set("bolts", 200);
+
+    myHashTable->printTable();
+
+    std::cout << myHashTable->get("bolts") << std::endl;
+    std::cout << myHashTable->get("bceazceaz") << std::endl;
+
+    vector<string> myKeys = myHashTable->keys();
+
+    for (auto key : myKeys) {
+        cout << key << " ";
+    }
 
     return 0;
 }

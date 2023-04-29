@@ -9,6 +9,6 @@ to learn more about data structures, algorithms and c++ language.
 - Doubly linked lists
 - Stacks
 - Queues
-- Trees
+- Trees (Binary Search Tree)
 - Hash tables
 - Graphs
