@@ -1,5 +1,5 @@
 #include <iostream>
-#include "hashtable/HashTable.h"
+#include "graph/Graph.h"
 
 int main() {
 /*    auto* myLinkedList = new linkedlist::LinkedList(5);
@@ -44,7 +44,7 @@ int main() {
     std::cout << myBST->contains(18) << std::endl;
     std::cout << myBST->contains(123);*/
 
-    auto* myHashTable = new hashtable::HashTable();
+/*    auto* myHashTable = new hashtable::HashTable();
     myHashTable->set("nails", 100);
     myHashTable->set("tile", 50);
     myHashTable->set("lumber", 80);
@@ -60,7 +60,22 @@ int main() {
 
     for (auto key : myKeys) {
         cout << key << " ";
-    }
+    }*/
+
+    auto* myGraph = new graph::Graph();
+
+    myGraph->addVertex("A");
+    myGraph->addVertex("B");
+    myGraph->addVertex("C");
+
+    myGraph->addEdge("A", "B");
+    myGraph->addEdge("A", "C");
+    myGraph->addEdge("B", "C");
+
+    myGraph->removeEdge("A", "B");
+    myGraph->removeVertex("C");
+
+    myGraph->printGraph();
 
     return 0;
 }
